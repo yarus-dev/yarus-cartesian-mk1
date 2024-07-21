@@ -1,0 +1,84 @@
+[server]
+host = 0.0.0.0
+port = 7125
+max_upload_size = 1024
+klippy_uds_address = ~/printer_data/comms/klippy.sock
+
+[file_manager]
+enable_object_processing = True
+
+[machine]
+provider = systemd_dbus
+shutdown_action = poweroff
+
+[database]
+
+[data_store]
+temperature_store_size = 1200
+gcode_store_size = 1000
+
+[job_queue]
+load_on_startup = True
+automatic_transition = False
+
+[announcements]
+subscriptions = 
+	klipper
+	moonraker
+	fluidd
+	mainsail
+	crowsnest
+
+[authorization]
+enable_api_key = True
+force_logins = False
+cors_domains = 
+	*.local
+	*.lan
+	*.xyz
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+
+[history]
+
+[octoprint_compat]
+enable_ufp = True
+
+[webcam Nebula]
+location = printer
+enabled = True
+service = mjpegstreamer-adaptive
+target_fps = 15
+target_fps_idle = 5
+stream_url = /webcam?action=stream
+snapshot_url = /webcam?action=snapshot
+aspect_ratio = 4:3
+
+[update_manager]
+enable_auto_refresh = True
+refresh_interval = 128
+
+[update_manager client crowsnest]
+type = git_repo
+path = ~/crowsnest
+origin = https://github.com/mainsail-crew/crowsnest.git
+install_script = tools/pkglist.sh
+
+[update_manager client fluidd]
+type = web
+channel = stable
+repo = fluidd-core/fluidd
+path = ~/fluidd
+
+[update_manager client mainsail]
+type = web
+channel = stable
+repo = mainsail-crew/mainsail
+path = ~/mainsail
+
