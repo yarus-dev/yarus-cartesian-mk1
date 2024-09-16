@@ -1,0 +1,12 @@
+{
+    "type": "machine_model",
+    "name": "Yarus Printer",
+    "model_id": "yarus_01",
+    "nozzle_diameter": "0.4;0.2;0.6;0.8",
+    "machine_tech": "FFF",
+    "family": "Yarus",
+    "bed_model": "",
+    "bed_texture": "orcaslicer_bed_texture.svg",
+    "hotend_model": "",
+    "default_materials": "Generic ABS;Generic PLA;Generic PETG;Generic TPU;Generic ASA;Generic PC;Generic PVA;My Generic PA;My Generic PA-CF"
+}

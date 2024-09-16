@@ -1,0 +1,4 @@
+- Micro-controller architecture: STMicroelectronics STM32
+- Processor model: STM32F103
+- Bootloader offset: 28KiB
+- Communication interface: Serial (on USART1 PA10/PA09)

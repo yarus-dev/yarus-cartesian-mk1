@@ -1,0 +1,10 @@
+{
+    "name": "Yarus",
+    "version": "02.01.01.00",
+    "force_update": "0",
+    "description": "Yarus configurations",
+    "machine_model_list": [],
+    "machine_list": [],
+    "process_list": [],
+    "filament_list": []
+}
